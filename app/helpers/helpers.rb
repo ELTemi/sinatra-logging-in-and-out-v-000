@@ -1,6 +1,6 @@
 class Helpers < ActiveRecord::Base
 
-  def self.current_user(username)
+  def self.current_user(session)
 
   end
 
