@@ -1,2 +1,2 @@
-class Helpers
+class Helpers < ActiveRecord::Base
 end
