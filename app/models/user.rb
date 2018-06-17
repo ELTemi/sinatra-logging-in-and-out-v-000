@@ -1,4 +1,4 @@
-class User
-  attr_accessor :username, :password, :balance
+class User < ActiveRecord::Base
+validates_presence_of :name, :balance :password
 end
 
