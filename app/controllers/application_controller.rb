@@ -12,7 +12,6 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     @user = User.find_by(username: params["username"])
-    binding.pry
     User.all.each do |user|
       if user.id == @user.id && user.username == @user.username
         session[:user_id] = @user.# IDEA:
