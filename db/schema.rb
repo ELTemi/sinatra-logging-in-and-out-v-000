@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180617193210) do
+ActiveRecord::Schema.define(version: 20180617210908) do
+
+  create_table "helpers", force: :cascade do |t|
+    t.string "current_user"
+    t.boolean "is_logged_in"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
