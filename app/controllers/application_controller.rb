@@ -13,12 +13,14 @@ class ApplicationController < Sinatra::Base
   post '/login' do
     @user = User.find_by(username: params["username"])
     binding.pry
-    if @user != nil
-      session[:user_id] = @user.id
-      redirect '/account'
-    else
-      redirect '/error'
-    end
+    User.all.each do |user|
+      if user.id == @user.id && user.username == @user.username
+        session[:user_id] = @user.# IDEA: 
+        redirect '/account'
+      elsif user.id != @user.id && user.username != @user.username
+        redirect '/error'
+      end
+    end      
   end
 
   get '/account' do
