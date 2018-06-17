@@ -11,6 +11,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
+    @user = User.create(username: params[:username], password: params[:password])
     redirect '/error'
   end
 
