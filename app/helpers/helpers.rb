@@ -1,4 +1,4 @@
-class Helpers < ActiveRecord::Base
+class Helper < ActiveRecord::Base
 
 
   def self.current_user(session)
