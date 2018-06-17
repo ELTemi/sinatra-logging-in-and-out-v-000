@@ -4,7 +4,7 @@ class Helpers < ActiveRecord::Base
 
   end
 
-  def self.is_logged_in?(user)
+  def self.is_logged_in?(session)
 
   end
 end
