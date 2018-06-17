@@ -25,6 +25,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
+    @user = User.find_by(username: params["username"])
     if is_logged_in? && current_user.username == params[:username]
       erb :account
     else
