@@ -3,7 +3,7 @@ class Helpers < ActiveRecord::Base
   def self.current_user(session)
     binding.pry
     self.is_logged_in?
-      @user = User.create(username: username)
+      @user = User.new
   end
 
   def self.is_logged_in?(session)
